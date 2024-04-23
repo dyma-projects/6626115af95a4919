@@ -1,0 +1,8 @@
+<ng-container *ngIf="statut;else p2">
+    <p>p1</p>
+</ng-container>
+<ng-template #p2>
+    <p>p2</p>
+</ng-template>
+
+<button (click)="statut = !statut">Change de paragraphe !</button>

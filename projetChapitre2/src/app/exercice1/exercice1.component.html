@@ -1,0 +1,22 @@
+<div>
+    <label for="text-input">Merci d'indiquer le titre: </label>
+    <input type="text" id="text-input" [(ngModel)]="titre">
+
+    <fieldset>
+        <legend>Voulez vous afficher le titre ?</legend>
+      
+        <div>
+          <input type="radio" id="oui" name="hidden" (click)="changeValue(false)" checked/>
+          <label for="huey">Oui</label>
+        </div>
+      
+        <div>
+          <input type="radio" id="dewey" name="hidden"  (click)="changeValue(true)"/>
+          <label for="dewey">Non</label>
+        </div>
+      </fieldset>
+</div>
+
+<section> 
+    <h1 [hidden]="titreHidden">{{titre}}</h1>
+</section>
